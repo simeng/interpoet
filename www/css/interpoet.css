@@ -1,0 +1,19 @@
+.inter {
+    color: #f33;
+}
+.poet {
+    color: #33f;
+}
+.content {
+    margin: auto;
+    width: 70%;
+    height: 70%;
+}
+.iresult {
+    background: #666;
+    color: #ccc;
+}
+.result {
+    background: #444;
+    color: #fff;
+}
