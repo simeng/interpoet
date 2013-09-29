@@ -1,9 +1,15 @@
 window.onload = function () {
+    var SpeechRecognition = window.webkitSpeechRecognition || window.mozSpeechRecognition || window.SpeechRecognition || undefined;
+    if (typeof(SpeechRecognition) == "undefined") {
+        alert("Sorry, Chrome is the only browser that has implemented SpeechRecognition");
+        return;
+    }
+
     document.querySelector(".record").onclick = function (evt) {
         console.log("ACTIVATED");
         var result = document.querySelector(".result");
         var iresult = document.querySelector(".iresult");
-        var recognition = new webkitSpeechRecognition();
+        var recognition = new SpeechRecognition();
 
         var transcript = '';
         var itranscript = '';
